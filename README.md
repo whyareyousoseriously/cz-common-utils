@@ -12,7 +12,7 @@
 - 2、Http请求工具
 - 3、IP工具
 - 4、返回对象封装工具
-- 5、lombook 1.18.8
+- 5、lombok 1.18.8
 - 6、guava 20.0
 - 7、fastjson 1.2.47
 - 8、xxl-excel 1.1.1
