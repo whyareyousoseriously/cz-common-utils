@@ -10,6 +10,10 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.springframework.http.HttpEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -28,6 +32,7 @@ import java.util.Set;
 @Slf4j
 public class HttpUtil {
 
+    @Deprecated
     public static String sendPost(String url, String params) throws IOException {
         OutputStreamWriter out = null;
         BufferedReader reader = null;
@@ -91,6 +96,7 @@ public class HttpUtil {
         return response;
     }
 
+    @Deprecated
     public static String sendPostV2(String postUrl,String params,String headers){
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         HttpResponse httpResponse = null;
@@ -130,6 +136,8 @@ public class HttpUtil {
         jsonObject.put("result",httpResponse);
         return jsonObject.toJSONString();
     }
+
+    @Deprecated
     public static String sendGet(String getUrl, Map<String,String> headers) {
         CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
         //建立一个连接
