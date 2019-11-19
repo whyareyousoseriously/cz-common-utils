@@ -34,14 +34,13 @@ public class DateUtil {
     }
 
     /**
-     * 获取指定时间戳今天的零点时间戳
-     * @param s 指定时间戳
+     * 获取指定时间戳今天的零点时间戳,13位
      * @return 零点时间戳
      */
-    public static String zeroPoint(String s){
-        Long currentTimestamps = System.currentTimeMillis();
-        Long oneDayTimestamps = (long) (60 * 60 * 24 * 1000);
-        return String.valueOf(currentTimestamps-(currentTimestamps+60*60*8*1000)%oneDayTimestamps);
+    public static long zeroPoint13(){
+        long currentTimestamps = System.currentTimeMillis();
+        long oneDayTimestamps = (long) (60 * 60 * 24 * 1000);
+        return currentTimestamps-(currentTimestamps+60*60*8*1000)%oneDayTimestamps;
     }
 
 
@@ -129,5 +128,31 @@ public class DateUtil {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         return calendar.getTimeInMillis();
+    }
+
+
+    /**
+     * 获取下一个月月初的时间戳
+     * @return
+     */
+    public static long getNextMouthTimeStamp10(){
+        Calendar cale = Calendar.getInstance();
+        cale.set(Integer.valueOf(DateUtil.getYear(new Date())),Integer.valueOf(DateUtil.getMonth(new Date())),1,0,0,0);
+        return cale.getTime().getTime()/1000;
+    }
+
+
+    /**
+     * 取得当月天数
+     * */
+    public static int getCurrentMonthLastDay()
+    {
+        Calendar a = Calendar.getInstance();
+        //把日期设置为当月第一天
+        a.set(Calendar.DATE, 1);
+        //日期回滚一天，也就是最后一天
+        a.roll(Calendar.DATE, -1);
+        int maxDate = a.get(Calendar.DATE);
+        return maxDate;
     }
 }

@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
+        <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.github.whyareyousoseriously</groupId>
     <artifactId>cz-common-utils</artifactId>
-    <version>0.0.2-RELEASE</version>
+    <version>0.0.8-RELEASE</version>
     <name>cz-common-utils</name>
     <description>Demo project for Spring Boot</description>
 
@@ -43,7 +43,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.0.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -57,7 +56,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
+            <version>1.2.61</version>
         </dependency>
         <dependency>
             <groupId>commons-httpclient</groupId>
