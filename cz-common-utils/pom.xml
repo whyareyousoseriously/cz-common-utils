@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.whyareyousoseriously</groupId>
     <artifactId>cz-common-utils</artifactId>
-    <version>0.1.0-RELEASE</version>
+    <version>0.1.1-RELEASE</version>
     <name>cz-common-utils</name>
     <description>Demo project for Spring Boot</description>
 
