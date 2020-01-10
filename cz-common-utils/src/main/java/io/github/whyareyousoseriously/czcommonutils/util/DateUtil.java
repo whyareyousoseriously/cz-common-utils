@@ -45,6 +45,16 @@ public class DateUtil {
 
 
     /**
+     * 获取昨天的日期
+     * @return date
+     */
+    public static Date getYesterdayDate(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE,-1);
+        return calendar.getTime();
+    }
+
+    /**
      * 获取日期年份
      * @param date 日期
      * @return
